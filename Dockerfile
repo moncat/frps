@@ -4,7 +4,7 @@ LABEL maintainer="Stille <stille@ioiox.com>"
 ENV VERSION 0.51.3
 ENV TZ=Asia/Shanghai
 WORKDIR /
-
+EXPOSE 7000 7500
 RUN apk add --no-cache tzdata \
     && ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo ${TZ} > /etc/timezone
